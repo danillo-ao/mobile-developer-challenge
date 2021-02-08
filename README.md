@@ -36,6 +36,7 @@ e valores conversões para dolar.
 - *API*
   - [Mercado Bitcoin](https://www.mercadobitcoin.com.br/api-doc)
   - [Foxbit](https://foxbit.com.br/api)
+  - [Blockchain.com](https://www.blockchain.com/api)
 
 ## O que vamos avaliar?
 
