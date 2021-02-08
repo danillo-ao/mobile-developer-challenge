@@ -2,6 +2,8 @@
 
 # Mobile Developer Challenge
 
+## Sobre o desafio
+
 Queremos que você nos de o seu melhor e traga uma prova de conceito para nosso desafio.
 
 Estamos em um momento muito propicio para investimentos pois sabemos que só
@@ -15,9 +17,12 @@ Como ainda estamos falando de uma prova de conceito, vamos implementar um unico 
 ativo (sugerimos bitcoin pois é mais facil encontrar APIs publicas com cotação)
 e valores conversões para dolar.
 
-## Pré requisitos técnicos
+## Pré-requisitos
 
+- React Native
 - TODO
+
+## Sugestão de layout
 
 ## Instruções
 
