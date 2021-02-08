@@ -22,7 +22,15 @@ e valores conversões para dolar.
 - React Native
 - TODO
 
-## Sugestão de layout
+## Opcional
+
+- Testes (Jest)
+
+## Sugestões
+
+- *API*
+  - [Mercado Bitcoin](https://www.mercadobitcoin.com.br/api-doc)
+  - [Foxbit](https://foxbit.com.br/api)
 
 ## Instruções
 
