@@ -11,8 +11,10 @@ Estamos em um momento muito propício para investimentos, pois sabemos que só
 Mas pra começar nesse mundo dos investimentos é importante criar um planejamento
 para entrar na aquisição de ativos e a venda no futuro.
 
-Com isso, desenvolva uma aplicação que faça o registro de todas as suas ordens de compra
+Com isso, desenvolva uma aplicação que:
+- faça o registro de todas as suas ordens de compra
 e venda, com extrato de ganhos ou perdas e o tipo de ativo que está sendo negociado.
+
 Como ainda estamos falando de uma prova de conceito, vamos implementar um único tipo de
 ativo (sugerimos bitcoin, pois é mais fácil encontrar APIs públicas com cotação).
 
