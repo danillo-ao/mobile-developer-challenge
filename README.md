@@ -19,11 +19,16 @@ e valores conversões para dolar.
 
 ## Pré-requisitos
 
+### App
+
+- Cadastro dos registros de compra e venda, com o valor e o ativo.
+- Extrato de todas as compras e vendas, mostrando a porcentagem de lucro para cada registro de compra.
+- Dashboard com o saldo total e a porcentagem de lucro total.
+
+### Pré-requisitos
+
 - React Native
-- TODO
-
-## Opcional
-
+- Redux
 - Testes (Jest)
 
 ## Sugestões
@@ -34,4 +39,8 @@ e valores conversões para dolar.
 
 ## Instruções
 
-- TODO
+- Faça fork desse projeto. Vamos liberar acesso a ele para o seu usuário do github.
+- Desenvolva o app seguindo os requisitos desse documento.
+- Vamos apreciar muito um README bem escrito, detalhando o projeto, como subir o projeto localmente, como buildar, e etc.
+- Crie uma branch dentro do seu fork e abra uma PR nesse repositório.
+- Na PR, fique a vontade para detalhar e explicar sobre o seu projeto e como foi desenvolvido.
