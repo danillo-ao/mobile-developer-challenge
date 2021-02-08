@@ -37,6 +37,15 @@ e valores conversões para dolar.
   - [Mercado Bitcoin](https://www.mercadobitcoin.com.br/api-doc)
   - [Foxbit](https://foxbit.com.br/api)
 
+## O que vamos avaliar?
+
+- Padrões de desenvolvimento.
+- UX / UI.
+- Side effects.
+- Documentação.
+- Testes.
+- Organização do projeto.
+
 ## Instruções
 
 - Faça fork desse projeto. Vamos liberar acesso a ele para o seu usuário do github.
