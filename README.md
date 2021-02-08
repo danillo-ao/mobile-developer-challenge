@@ -17,6 +17,12 @@ Como ainda estamos falando de uma prova de conceito, vamos implementar um unico 
 ativo (sugerimos bitcoin pois é mais facil encontrar APIs publicas com cotação)
 e valores conversões para dolar.
 
+Aqui está o nosso link do FIGMA para que você tenha uma referencia visual
+https://www.figma.com/file/7drKRRPaXZEC1Qm1xZsBfs/Untitled?node-id=0%3A1
+
+Vale ressaltar: é apenas uma referencia visual. Te incentivamos a criar uma interface melhor do que
+está (ou até mesmo melhorar está) caso seja capaz.
+
 ## Pré-requisitos
 
 ### App
@@ -37,6 +43,9 @@ e valores conversões para dolar.
   - [Mercado Bitcoin](https://www.mercadobitcoin.com.br/api-doc)
   - [Foxbit](https://foxbit.com.br/api)
   - [Blockchain.com](https://www.blockchain.com/api)
+  
+- *Disponibilização
+  Caso tenha uma conta na playstore no na apple store e queira publicar, vamos te dar muitos pontos extras.  
 
 ## O que vamos avaliar?
 
