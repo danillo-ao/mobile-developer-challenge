@@ -22,7 +22,7 @@ e valores conversões para dolar.
 ### App
 
 - Cadastro dos registros de compra e venda, com o valor e o ativo.
-- Extrato de todas as compras e vendas, mostrando a porcentagem de lucro para cada registro de compra.
+- Extrato de compras e vendas, mostrando a porcentagem de lucro para cada registro de compra.
 - Dashboard com o saldo total e a porcentagem de lucro total.
 
 ### Pré-requisitos
