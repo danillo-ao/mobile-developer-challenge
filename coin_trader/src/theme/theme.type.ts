@@ -15,6 +15,7 @@ export type ThemeColors = typeof colors;
 /** END OF COLORS TYPES */
 
 /** FONTS TYPES */
+export type ThemeFontsNames = keyof typeof fonts;
 export type ThemeFonts = typeof fonts;
 export type ThemeFontSizes = typeof fontSizes;
 /** END OF FONTS TYPES */

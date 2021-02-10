@@ -30,8 +30,10 @@ export const colors: ThemeColorShade = {
 
 /** FONTS VALUES */
 export const fonts = {
-  default: 'Lato' as 'Lato',
-  title: 'Ubuntu' as 'Ubuntu',
+  default: 'Lato-Regular' as 'Lato-Regular',
+  defaultBold: 'Lato-Bold' as 'Lato-Bold',
+  title: 'Ubuntu-Regular' as 'Ubuntu-Regular',
+  titleBold: 'Ubuntu-Bold' as 'Ubuntu-Bold',
 };
 
 export const fontSizes = {
@@ -46,6 +48,7 @@ export const fontSizes = {
 /** END OF GENERIC VALUES */
 export const units = {
   padding: 16 as 16,
+  borderRadius: 5 as 5,
 };
 /** END OF GENERIC VALUES */
 
