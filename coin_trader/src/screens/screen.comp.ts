@@ -5,7 +5,7 @@ import {ScreenProps} from '@screens/screen.types';
 export const Screen = styled.View<ScreenProps>`
   flex: 1;
   flex-direction: column;
-  background-color: ${getThemeColor('secondary')};  
+  background-color: ${({ background }) => !!background ? background : getThemeColor('secondary')};  
   padding: ${({ pad, theme }) => !!pad ? theme.units.padding : 0}px;
 
   ${({ centerVertical }) => !!centerVertical && css` justify-content: center; `};

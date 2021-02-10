@@ -6,7 +6,7 @@ import {
 } from '@theme/theme.values';
 
 /** COLORS TYPES */
-export type ColorsName = 'primary' | 'secondary' | 'black' | 'white' | 'success' | 'error';
+export type ColorsName = 'primary' | 'secondary' | 'black' | 'blue' | 'cyan' | 'purple' | 'white' | 'success' | 'error';
 export type ColorsShade = { base: string; lighter?: string; darker?: string }
 export type ThemeColorShade = {
   [color in ColorsName]: ColorsShade

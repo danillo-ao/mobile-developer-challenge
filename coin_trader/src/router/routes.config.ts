@@ -3,6 +3,7 @@ const routes = {
   index: 'home',
   // other routes
   home: 'home',
+  transactions: 'transactions',
 };
 
 export default routes;

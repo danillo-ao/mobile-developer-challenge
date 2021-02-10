@@ -10,6 +10,19 @@ export const colors: ThemeColorShade = {
   secondary: {
     base: '#2B363C' as '#2B363C',
   },
+  purple: {
+    base: '#5e0780' as '#5e0780',
+    darker: '#220e27' as '#220e27',
+    lighter: '#43284a' as '#43284a',
+  },
+  blue: {
+    base: '#3c287d' as '#3c287d',
+    lighter: '#877ef6' as '#877ef6',
+    darker: '#130e50' as '#130e50',
+  },
+  cyan: {
+    base: '#398fab' as '#398fab',
+  },
   white: {
     base: '#fafafa',
     lighter: '#ffffff',

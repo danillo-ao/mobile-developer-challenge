@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/button/button.comp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/button/button.styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/button/button.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/text/text.comp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/text/text.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/screens/screen.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.comp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.screen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/text/text.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/text/text.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/text/text.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/text/text.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/router/router.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/router/router.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/router/routes.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/router/routes.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/home/home.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/home/home.screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/home/home.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/home/home.styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/screen.comp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/screen.comp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/screen.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/screen.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/src/theme/theme.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/src/theme/theme.values.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.values.ts" afterDir="false" />
     </list>
@@ -41,6 +45,11 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/coin_trader/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/coin_trader/src/screens/transactions" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
-      <workItem from="1612895985938" duration="11977000" />
+      <workItem from="1612895985938" duration="17436000" />
     </task>
     <servers />
   </component>
@@ -61,10 +70,10 @@
       <screen x="0" y="27" width="1366" height="697" />
     </state>
     <state x="385" y="176" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.697@0.27.1366.697" timestamp="1612916280725" />
-    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1612917148935">
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1612924734706">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1612917148935" />
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1612924734706" />
     <state x="374" y="113" width="618" height="580" key="find.popup" timestamp="1612917984783">
       <screen x="0" y="27" width="1366" height="697" />
     </state>

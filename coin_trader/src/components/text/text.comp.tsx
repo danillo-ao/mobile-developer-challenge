@@ -10,6 +10,7 @@ const TextComp = styled.Text<Partial<TextProps>>`
   font-family: ${({ theme, family }) => theme.fonts[family]};
   font-size: ${({ theme, size }) => theme.fontSizes[size]};
   color: ${({ color, shade }) => getThemeColor(color, shade)};
+  text-align: ${({ center }) => !!center ? 'center' : 'left'};
 `;
 
 const Text: React.FC<TextProps> = (props: TextProps): React.FunctionComponentElement<TextProps> => {
@@ -20,7 +21,7 @@ const Text: React.FC<TextProps> = (props: TextProps): React.FunctionComponentEle
   const size: keyof ThemeFontSizes = get(props, ['size'], 'md');
 
   return (
-    <TextComp family={family} color={color} shade={shade} size={size}>
+    <TextComp {...props} family={family} color={color} shade={shade} size={size} center={props.center}>
       {props.children}
     </TextComp>
   );

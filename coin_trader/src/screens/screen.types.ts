@@ -3,6 +3,7 @@ export type ScreenProps = {
   start?: boolean;
   end?: boolean;
   pad?: boolean;
+  background?: string;
 
   centerHorizontal?: boolean;
   startHorizontal?: boolean;
