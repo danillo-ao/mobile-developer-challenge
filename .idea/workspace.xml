@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.utils.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oFx93ia6r2j0GsynnW7LC2z0Hu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chords" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/coin_trader/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="" />
+      <created>1612895984921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612895984921</updated>
+      <workItem from="1612895985938" duration="4646000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1612910873551">
+      <screen x="0" y="27" width="1366" height="697" />
+    </state>
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1612910873551" />
+    <state x="374" y="113" width="618" height="522" key="find.popup" timestamp="1612913331973">
+      <screen x="0" y="27" width="1366" height="697" />
+    </state>
+    <state x="374" y="113" width="618" height="522" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1612913331973" />
+  </component>
+</project>
