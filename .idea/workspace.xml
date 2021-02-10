@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/redux/actions/actions.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/redux/actions/transactions.actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/transactions/transactions.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/transactions/transactions.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/redux/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/screens/screen.comp.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/sdk/api/endpoints.api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/sdk/client/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/router/router.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/router/router.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/home/home.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/home/home.screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
-      <workItem from="1612895985938" duration="4646000" />
+      <workItem from="1612895985938" duration="7518000" />
     </task>
     <servers />
   </component>
@@ -46,13 +60,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1612910873551">
+    <state x="385" y="176" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612916280725">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1612910873551" />
-    <state x="374" y="113" width="618" height="522" key="find.popup" timestamp="1612913331973">
+    <state x="385" y="176" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.697@0.27.1366.697" timestamp="1612916280725" />
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1612917148935">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="374" y="113" width="618" height="522" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1612913331973" />
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1612917148935" />
+    <state x="374" y="113" width="618" height="580" key="find.popup" timestamp="1612917984783">
+      <screen x="0" y="27" width="1366" height="697" />
+    </state>
+    <state x="374" y="113" width="618" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1612917984783" />
   </component>
 </project>

@@ -8,7 +8,7 @@ import HomeScreen from '@screens/home/home.screen';
 import routes from '@router/routes.config';
 
 const Stack = createStackNavigator();
-const Router: React.FC<void> = (): React.FunctionComponentElement<void> => {
+const Router: React.FC<any> = (): React.FunctionComponentElement<any> => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={routes.index} screenOptions={{ headerShown: false }}>

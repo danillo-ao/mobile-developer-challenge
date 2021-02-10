@@ -16,16 +16,27 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components/native';
 
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import reduxStore, { reduxStorePersisted } from '@redux/store';
+
 import { StatusBar } from 'react-native';
 import theme from '@theme/theme';
 import Router from '@router/router.comp';
+import {getThemeColor} from '@theme/theme.utils';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar barStyle="dark-content" />
-      <Router />
-    </ThemeProvider>
+    <Provider store={reduxStore}>
+      <PersistGate loading={null} persistor={reduxStorePersisted}>
+
+        <ThemeProvider theme={theme}>
+          <StatusBar backgroundColor={getThemeColor('primary')} barStyle="dark-content" />
+          <Router />
+        </ThemeProvider>
+
+      </PersistGate>
+    </Provider>
   );
 };
 
