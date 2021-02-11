@@ -21,7 +21,9 @@
       "@screens/*": ["src/screens/*"],
       "@theme/*": ["src/theme/*"],
       "@sdk/*": ["src/sdk/*"],
-      "@redux/*": ["src/redux/*"]
+      "@redux/*": ["src/redux/*"],
+      "@values/*": ["src/values/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "exclude": [

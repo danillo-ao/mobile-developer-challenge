@@ -9,6 +9,7 @@ export const colors: ThemeColorShade = {
   },
   secondary: {
     base: '#2B363C' as '#2B363C',
+    lighter: '#58636a' as '#58636a',
   },
   purple: {
     base: '#5e0780' as '#5e0780',
@@ -31,6 +32,12 @@ export const colors: ThemeColorShade = {
     base: '#000000' as '#000000',
     lighter: '#333333' as '#333333',
   },
+  red: {
+    base: '#7F0000' as '#7F0000',
+  },
+  green: {
+    base: '#75B53C' as '#75B53C',
+  },
   error: {
     base: '#7F0000' as '#7F0000',
   },
@@ -50,11 +57,13 @@ export const fonts = {
 };
 
 export const fontSizes = {
+  ssm: '12px' as '12px',
   sm: '15px' as '15px',
   md: '17px' as '17px',
   lg: '19px' as '19px',
   xl: '21px' as '21px',
   xxl: '23px' as '23px',
+  xxxl: '26px' as '26px',
 };
 /** END OF FONTS VALUES */
 
@@ -62,6 +71,7 @@ export const fontSizes = {
 export const units = {
   padding: 16 as 16,
   borderRadius: 5 as 5,
+  headerHeight: 60 as 60,
 };
 /** END OF GENERIC VALUES */
 

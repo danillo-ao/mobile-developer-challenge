@@ -8,6 +8,7 @@ import {createStackNavigator, StackCardStyleInterpolator} from '@react-navigatio
 import routes from '@router/routes.config';
 import HomeScreen from '@screens/home/home.screen';
 import TransactionsScreen from '@screens/transactions/transactions.screen';
+import OrderScreen from '@screens/order/order.screen';
 
 const Stack = createStackNavigator();
 const Router: React.FC<any> = (): React.FunctionComponentElement<any> => {
@@ -38,6 +39,7 @@ const Router: React.FC<any> = (): React.FunctionComponentElement<any> => {
         {/* routes here */}
         <Stack.Screen name={routes.home} component={HomeScreen} />
         <Stack.Screen name={routes.transactions} component={TransactionsScreen} />
+        <Stack.Screen name={routes.order} component={OrderScreen} />
         {/* end of routes */}
       </Stack.Navigator>
     </NavigationContainer>

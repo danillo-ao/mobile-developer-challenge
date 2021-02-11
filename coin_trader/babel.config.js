@@ -14,6 +14,8 @@ module.exports = {
           '@theme': './src/theme',
           '@sdk': './src/sdk',
           '@redux': './src/redux',
+          '@values': './src/values',
+          '@utils': './src/utils',
         },
       },
     ],

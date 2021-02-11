@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import routes from '@router/routes.config';
 
 import Text from '@components/text/text.comp';
+import imagesUris from '@values/images.values';
 
 const HomeScreen: React.FC<any> = (): React.FunctionComponentElement<any> => {
 
@@ -13,7 +14,7 @@ const HomeScreen: React.FC<any> = (): React.FunctionComponentElement<any> => {
 
   return (
     <Screen center pad>
-      <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://i.ibb.co/T1Tzr1g/icon.png' }} />
+      <Image style={{ width: 100, height: 100 }} source={{ uri: imagesUris.icon_colored }} />
       <Text family="titleBold" color="white" size="xxl">
         Coin_Trader
       </Text>

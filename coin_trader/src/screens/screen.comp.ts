@@ -27,3 +27,8 @@ export const ScreenScroll = styled.ScrollView`
   width: 100%;
   padding: ${({ theme }) => theme.units.padding}px;
 `;
+
+export const ScreenScrollInner = styled.View`
+  flex-direction: column;
+  padding: 0 0 60px 0;
+`;

@@ -27,6 +27,9 @@ const Text: React.FC<TextProps> = (props: TextProps): React.FunctionComponentEle
   );
 };
 
-
+Text.defaultProps = {
+  color: 'white',
+  size: 'md',
+};
 
 export default Text;

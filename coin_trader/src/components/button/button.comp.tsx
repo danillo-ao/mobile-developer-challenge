@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps): React.FunctionCompon
    */
   const renderChild = () => {
     if (typeof props.children === 'string') {
-      return <Text family="defaultBold">{props.children}</Text>;
+      return <Text color="black" family="defaultBold">{props.children}</Text>;
     }
     return props.children;
   }; // renderChild

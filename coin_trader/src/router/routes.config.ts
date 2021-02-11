@@ -4,6 +4,7 @@ const routes = {
   // other routes
   home: 'home',
   transactions: 'transactions',
+  order: 'order',
 };
 
 export default routes;

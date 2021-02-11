@@ -27,6 +27,16 @@ export const WalletActions = styled.View`
 export const WalletBalance = styled.View`
   width: 100%;
   flex-direction: row;
+  padding-bottom: ${({ theme }) => theme.units.padding}px;
+  border-bottom-width: 1px;
+  border-color: ${getThemeColor('white', 'base', '88')};
+`;
+
+export const WalletUnits = styled.View`
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: ${({ theme }) => theme.units.padding}px;
 `;
 
 export const WalletBalanceCoin = styled.View<{ toEnd?: boolean }>`
@@ -36,3 +46,4 @@ export const WalletBalanceCoin = styled.View<{ toEnd?: boolean }>`
   ${({ toEnd }) => !toEnd && css` padding-right: ${({ theme }) => (theme.units.padding / 2)}px; ` };
   ${({ toEnd }) => !!toEnd && css` flex: 1; align-items: flex-end; padding-left: ${({ theme }) => (theme.units.padding / 2)}px;`};
 `;
+
