@@ -1,10 +1,14 @@
 import { set, cloneDeep } from 'lodash';
-import {TransactionReducer} from '@redux/reducers/transactions/transactions.types';
 import {Action} from '@redux/actions/actions.type';
+import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 
-const initialState: TransactionReducer = {};
+const initialState: WalletReducer = {
+  brl: 10000,
+  btc: 0,
+  btc_unit: 0.0,
+};
 
-export const transactionsReducer = (state: TransactionReducer = initialState, action: Action) => {
+export const walletReducer = (state: WalletReducer = initialState, action: Action) => {
   const newState = cloneDeep(state);
 
   switch (action.type) {
