@@ -2,16 +2,9 @@ import * as React from 'react';
 import {get} from 'lodash';
 import {IconText, IconWrapper} from '@components/icons/icon.styles';
 import theme from '@theme/theme';
+import {IconProps} from '@components/icons/icon.types';
 
 const family = require('./glyphmap.json');
-
-/** ICON TYPES */
-export type IconProps = {
-  name?: keyof typeof family;
-  size?: number;
-  color?: string;
-};
-/** END OF ICON TYPES */
 
 const Icon: React.FC<IconProps> = (props: IconProps): React.FunctionComponentElement<IconProps> => {
   // second: If the family was found, now, get the char code of the icon, based on "name" in glyph map

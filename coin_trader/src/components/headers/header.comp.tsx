@@ -23,6 +23,22 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps): React.FunctionCompon
     }
   }; // renderGoBack
 
+
+  /**
+   * Render a custom action in header if it was settted
+   */
+  const renderHeaderAction = (): React.FunctionComponentElement<any> => {
+    if (!!props.actionIcon && !!props.action) {
+      return (
+        <HeaderActionPress onPress={() => { props.action(); }}>
+          <Icon name={props.actionIcon} />
+        </HeaderActionPress>
+      );
+    }
+
+    return null;
+  }; // renderHeaderAction
+
   return (
     <HeaderComp>
 
@@ -32,7 +48,9 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps): React.FunctionCompon
       <HeaderTitleWrapper>
         <Text numberOfLines={1} color="black" family="titleBold">{props.title}</Text>
       </HeaderTitleWrapper>
-      <HeaderAction />
+      <HeaderAction>
+        {renderHeaderAction()}
+      </HeaderAction>
 
     </HeaderComp>
   );

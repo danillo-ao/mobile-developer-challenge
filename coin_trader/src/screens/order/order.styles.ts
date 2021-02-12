@@ -83,6 +83,7 @@ export const OrderShortcutAction = styled.TouchableOpacity`
 
 export const OrderResumeBalance = styled.View`
   width: 100%;
+  position:relative;
   align-items: center;
   justify-content: center;
   margin-top: ${({ theme }) => theme.units.padding * 2}px;

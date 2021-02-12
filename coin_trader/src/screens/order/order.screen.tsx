@@ -43,16 +43,13 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
 
 
   const [sellOrder, setSellOrder] = React.useState<boolean>(false);
-  const [fetching, setFetching] = React.useState<boolean>(false);
+  const [fetching, setFetching] = React.useState<boolean>(true);
   const [animation] = React.useState<Animated.Value>(new Animated.Value(1));
 
   const [buyValue, setBuyValue] = React.useState<number>(0);
   const [sellQuantity, setSellQuantity] = React.useState<number>(0);
   const [orderResultSell, setOrderResultSell] = React.useState<number>(0);
   const [orderResultBuy, setOrderResultBuy] = React.useState<number>(0);
-
-
-  React.useEffect(() => { fetchBitcoins(); }, []);
 
   React.useEffect(() => {
     // btc unit
@@ -61,23 +58,34 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
     } else {
       setOrderResultBuy(0);
     }
-  }, [buyValue]);
+  }, [buyValue, bitcoin.last]);
 
   React.useEffect(() => {
     // brl
     setOrderResultSell(sellQuantity * bitcoin.last);
-  }, [sellQuantity]);
+  }, [sellQuantity, bitcoin.last]);
+
 
   /**
    * Used to fetch the bitcoins data again, to keep it updated
+   * used once when the screen become focused
    */
-  const fetchBitcoins = async (): Promise<void> => {
+  const fetchBitcoins = React.useCallback(async () => {
+    await props.actions.getBitcoinsData();
+    setFetching(false);
+  }, [props.actions]);
+
+  /**
+   * Used to manually refetch the bitcoin data
+   */
+  const refetchBitcoins = () => {
     if (!fetching) {
       setFetching(true);
-      await props.actions.getBitcoinsData();
-      setFetching(false);
+      fetchBitcoins(); // call the function to get the data
     }
-  }; // fetchBitcoins
+  }; // refetchBitcoins
+
+  React.useEffect(() => { fetchBitcoins(); }, [fetchBitcoins]);
 
   const handleOrderType = (orderType): void => {
     // only change the value and run the animation if both as different
@@ -157,7 +165,11 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
 
   return (
     <Screen>
-      <Header title="Nova Ordem" />
+      <Header
+        title="Nova Ordem"
+        actionIcon="refresh-cw"
+        action={refetchBitcoins}
+      />
 
       <ScreenScroll>
         <ScreenScrollInner>
@@ -169,7 +181,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
             <OrderPriceValue>
               <Text size="ssm" style={{ marginRight: 5 }}>R$</Text>
               {fetching
-                ? (<ActivityIndicator color={getThemeColor('white')} size={30} />)
+                ? (<ActivityIndicator color={getThemeColor('white')} size={31} />)
                 : (<Text size="xxxl" family="titleBold">{currencyFormat(bitcoin.last)}</Text>)
               }
             </OrderPriceValue>
