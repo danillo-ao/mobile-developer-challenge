@@ -13,6 +13,7 @@ import Text from '@components/text/text.comp';
 import Button from '@components/button/button.comp';
 import imagesUris from '@values/images.values';
 import {getThemeColor} from '@theme/theme.utils';
+import {SnackbarContext} from '@components/snackbar/snackbar.comp';
 
 
 const HomeScreen: React.FC<HomeProps> = (props: HomeProps): React.FunctionComponentElement<HomeProps> => {
@@ -20,6 +21,10 @@ const HomeScreen: React.FC<HomeProps> = (props: HomeProps): React.FunctionCompon
   const navigation = useNavigation();
 
   const [fetching, setFetching] = React.useState<boolean>(false);
+
+  const snackbar = React.useContext(SnackbarContext);
+
+  snackbar.show('testeeeee');
 
   /**
    * Used to fetch the bitcoin data and redirect user to the extract

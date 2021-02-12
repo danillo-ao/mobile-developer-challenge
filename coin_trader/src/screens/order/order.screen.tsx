@@ -41,7 +41,6 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
   const bitcoin: BitcoinReducer = get(props, ['store', 'bitcoin']);
   const wallet: WalletReducer = get(props, ['store', 'wallet']);
 
-
   const [sellOrder, setSellOrder] = React.useState<boolean>(false);
   const [fetching, setFetching] = React.useState<boolean>(true);
   const [animation] = React.useState<Animated.Value>(new Animated.Value(1));
@@ -87,6 +86,10 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
 
   React.useEffect(() => { fetchBitcoins(); }, [fetchBitcoins]);
 
+  /**
+   * change the order type and animate the core of the form
+   * @param orderType
+   */
   const handleOrderType = (orderType): void => {
     // only change the value and run the animation if both as different
     if (orderType !== sellOrder) {
@@ -99,6 +102,10 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
   }; // handleOrderType
 
 
+  /**
+   * Used to set a value to sell or buy, using shortcut
+   * @param percent
+   */
   const shortcutValue = (percent: number): void => {
     // if the order is a sell type, the shortcut must be used to btc units
     if (sellOrder) {
@@ -112,6 +119,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
     }
 
   }; // shortcutValue
+
 
   /**
    * ----------------

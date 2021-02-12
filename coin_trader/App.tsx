@@ -24,6 +24,7 @@ import { StatusBar } from 'react-native';
 import theme from '@theme/theme';
 import Router from '@router/router.comp';
 import {getThemeColor} from '@theme/theme.utils';
+import Snackbar from '@components/snackbar/snackbar.comp';
 
 
 if (__DEV__) {
@@ -34,12 +35,14 @@ const App = () => {
   return (
     <Provider store={reduxStore}>
       <PersistGate loading={null} persistor={reduxStorePersisted}>
-
         <ThemeProvider theme={theme}>
-          <StatusBar backgroundColor={getThemeColor('primary')} barStyle="dark-content" />
-          <Router />
-        </ThemeProvider>
 
+          <Snackbar>
+            <StatusBar backgroundColor={getThemeColor('primary')} barStyle="dark-content" />
+            <Router />
+          </Snackbar>
+
+        </ThemeProvider>
       </PersistGate>
     </Provider>
   );
