@@ -1,5 +1,5 @@
 import { set, cloneDeep } from 'lodash';
-import {Action} from '@redux/actions/actions.type';
+import {Action} from '@redux/actions/actions.types';
 import {OrdersReducer} from '@redux/reducers/orders/orders.types';
 
 const initialState: OrdersReducer = {

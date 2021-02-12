@@ -1,5 +1,5 @@
-import { set, cloneDeep } from 'lodash';
-import {Action} from '@redux/actions/actions.type';
+import { set, get, cloneDeep } from 'lodash';
+import {Action, actionType} from '@redux/actions/actions.types';
 import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 
 const initialState: WalletReducer = {
@@ -10,11 +10,25 @@ const initialState: WalletReducer = {
 
 export const walletReducer = (state: WalletReducer = initialState, action: Action) => {
   const newState = cloneDeep(state);
+  let payload;
 
   switch (action.type) {
     // case actionType.SAVE_TOKEN:
     //   set(newState, ["token"], action.payload.token);
     //   return newState;
+
+    case actionType.SAVE_BTC_BALANCE:
+      payload = { btc: get(action, ['payload', 'btc'], state.btc) };
+      return { ...newState, ...payload };
+
+    case actionType.SAVE_BTC_UNITS:
+      payload = {
+        btc: get(action, ['payload', 'btc'], state.btc),
+        btc_unit: get(action, ['payload', 'btc_unit'], state.btc_unit),
+      };
+      return { ...newState, ...payload };
+
+
 
     default:
       return state;

@@ -8,7 +8,7 @@ import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 import {walletReducer} from '@redux/reducers/wallet/wallet.reducer';
 
 export type RootReducer = {
-  bitcoins: BitcoinReducer
+  bitcoin: BitcoinReducer
   orders: OrdersReducer
   wallet: WalletReducer
 }

@@ -1,4 +1,8 @@
+import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
+
 export type WalletProps = {
-  brlBalance?: number;
-  btcBalance?: number;
+  store: {
+    errorBtc: boolean;
+    wallet: WalletReducer
+  }
 };

@@ -25,6 +25,11 @@ import theme from '@theme/theme';
 import Router from '@router/router.comp';
 import {getThemeColor} from '@theme/theme.utils';
 
+
+if (__DEV__) {
+  import('./ReactotronConfig').then(() => console.log('Reactotron Configured'));
+}
+
 const App = () => {
   return (
     <Provider store={reduxStore}>

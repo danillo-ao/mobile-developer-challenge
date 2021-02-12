@@ -24,7 +24,7 @@ const TransactionsScreen: React.FC<any> = (): React.FunctionComponentElement<any
    */
   const renderWallet = (): React.FunctionComponentElement<any> => (
     <TransactionsWalletWrapper>
-      <Wallet brlBalance={10000} />
+      <Wallet />
       <WalletTransition />
     </TransactionsWalletWrapper>
   ); // renderWallet

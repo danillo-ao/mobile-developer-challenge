@@ -1,5 +1,9 @@
 import * as React from 'react';
 import { get } from 'lodash';
+import {connect} from 'react-redux';
+
+import Reactotron from 'reactotron-react-native';
+
 
 import {WalletProps} from '@components/wallet/wallet.types';
 import {
@@ -16,14 +20,17 @@ import {Image, TouchableOpacity} from 'react-native';
 import {getThemeColor} from '@theme/theme.utils';
 import imagesUris from '@values/images.values';
 import {currencyFormat} from '@utils/currency.util';
+import {RootReducer} from '@redux/reducers';
 
 
 const Wallet: React.FC<WalletProps> = (props: WalletProps): React.FunctionComponentElement<WalletProps> => {
 
   const [visible, setVisible] = React.useState<boolean>(true);
 
-  const brl: number = get(props, ['brlBalance'], 0);
-  const btc: number = get(props, ['btcBalance'], 0);
+  const brl: number = get(props, ['store', 'wallet', 'brl'], 0);
+  const btc: number = get(props, ['store', 'wallet', 'btc'], 0);
+  const btcUnit: number = get(props, ['store', 'wallet', 'btc_unit'], 0);
+  const error: boolean = get(props, ['store', 'errorBtc'], false);
 
   return (
     <WalletComp>
@@ -47,7 +54,7 @@ const Wallet: React.FC<WalletProps> = (props: WalletProps): React.FunctionCompon
 
           <WalletBalanceCoin toEnd>
             <Text>Saldo em Bitcoins</Text>
-            <Text numberOfLines={1} ellipsizeMode="tail" family="titleBold" size="xxl">
+            <Text color={error ? 'error' : 'white'} numberOfLines={1} ellipsizeMode="tail" family="titleBold" size="xxl">
               R$ {visible ? currencyFormat(btc) : '• • • • • •'}
             </Text>
           </WalletBalanceCoin>
@@ -55,12 +62,20 @@ const Wallet: React.FC<WalletProps> = (props: WalletProps): React.FunctionCompon
 
         <WalletUnits>
           <Text size="sm">Unidades</Text>
-          <Text size="sm">{visible ? '0,000' : '• • • •' }</Text>
+          <Text size="sm">{visible ? btcUnit.toString() : '• • • •' }</Text>
         </WalletUnits>
 
       </WalletCard>
     </WalletComp>
   );
-}
+};
 
-export default Wallet;
+
+const mapStateToProps = (state: RootReducer) => ({
+  store: {
+    errorBtc: state.bitcoin.error,
+    wallet: state.wallet,
+  },
+});
+
+export default connect(mapStateToProps, null)(Wallet);
