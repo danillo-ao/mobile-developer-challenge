@@ -1,18 +1,20 @@
 import * as React from 'react';
 
-import {Screen} from '@screens/screen.comp';
+import { useNavigation } from '@react-navigation/native';
+
+
+import { Screen } from '@screens/screen.comp';
 import Text from '@components/text/text.comp';
 import Wallet from '@components/wallet/wallet.comp';
 import {
   ButtonWrapper,
   TransactionsEmpty,
   TransactionsEmptyWrapper, TransactionsFlatList,
-  TransactionsWalletWrapper, WalletTransition
+  TransactionsWalletWrapper, WalletTransition,
 } from '@screens/transactions/transactions.styles';
 import Icon from '@components/icons/icon.comp';
-import {getThemeColor} from '@theme/theme.utils';
+import { getThemeColor } from '@theme/theme.utils';
 import Button from '@components/button/button.comp';
-import { useNavigation } from '@react-navigation/native';
 import routes from '@router/routes.config';
 
 const TransactionsScreen: React.FC<any> = (): React.FunctionComponentElement<any> => {
@@ -53,11 +55,15 @@ const TransactionsScreen: React.FC<any> = (): React.FunctionComponentElement<any
       />
 
       <ButtonWrapper>
-        <Button onPress={() => { navigation.navigate(routes.order) }}>Comprar e vender</Button>
+        <Button onPress={() => { navigation.navigate(routes.order) }}>
+          Nova ordem
+        </Button>
       </ButtonWrapper>
 
     </Screen>
   );
 };
+
+
 
 export default TransactionsScreen;

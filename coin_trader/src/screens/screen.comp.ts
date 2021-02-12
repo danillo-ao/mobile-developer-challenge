@@ -19,7 +19,6 @@ export const Screen = styled.View<ScreenProps>`
   ${({ center }) => !!center && css` align-items: center; justify-content: center; `};
   ${({ start }) => !!start && css` align-items: flex-start; justify-content: flex-start; `};
   ${({ end }) => !!end && css` align-items: flex-end; justify-content: flex-end; `};
-  
 
 `;
 
