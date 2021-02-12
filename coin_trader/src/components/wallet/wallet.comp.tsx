@@ -19,7 +19,7 @@ import Icon from '@components/icons/icon.comp';
 import {Image, TouchableOpacity} from 'react-native';
 import {getThemeColor} from '@theme/theme.utils';
 import imagesUris from '@values/images.values';
-import {currencyBtc, currencyFormat} from '@utils/currency.util';
+import {parseBtc, currencyFormat} from '@utils/currency.util';
 import {RootReducer} from '@redux/reducers';
 
 
@@ -62,7 +62,7 @@ const Wallet: React.FC<WalletProps> = (props: WalletProps): React.FunctionCompon
 
         <WalletUnits>
           <Text size="sm">Unidades</Text>
-          <Text size="sm">{visible ? currencyBtc(btcUnit, 8) : '• • • •' }</Text>
+          <Text size="sm">{visible ? parseBtc(btcUnit, 8) : '• • • •' }</Text>
         </WalletUnits>
 
       </WalletCard>

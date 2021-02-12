@@ -32,7 +32,7 @@ import {getDate} from '@utils/date.util';
 import {OrderScreenProps} from '@screens/order/order.types';
 import {getBitcoinsData} from '@redux/actions/bitcoins.actions';
 import {getThemeColor} from '@theme/theme.utils';
-import {currencyBtc, currencyFormat} from '@utils/currency.util';
+import {parseBtc, currencyFormat} from '@utils/currency.util';
 import {BitcoinReducer} from '@redux/reducers/bitcoin/bitcoin.types';
 import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 
@@ -150,7 +150,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
   const renderOrderResultBuy = (): React.FunctionComponentElement<any> => (
     <OrderLine largeMargin>
       <Text color="green">Quantidade em Bitcoins</Text>
-      <Text color="primary" shade="lighter">{currencyBtc(orderResultBuy)}</Text>
+      <Text color="primary" shade="lighter">{parseBtc(orderResultBuy)}</Text>
     </OrderLine>
   ); // renderOrderResultBuy
 
@@ -235,7 +235,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
               </OrderResumeCol>
               <OrderResumeCol toEnd>
                 <Text size="sm">Unidades Disponíveis</Text>
-                <Text size="sm">{currencyBtc(wallet.btc_unit, 8)}</Text>
+                <Text size="sm">{parseBtc(wallet.btc_unit, 8)}</Text>
               </OrderResumeCol>
             </OrderResumeBalanceInner>
 
