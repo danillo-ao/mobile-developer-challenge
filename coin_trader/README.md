@@ -1,3 +1,5 @@
+> na raiz deste projeto, existe o arquivo ``coin_trader_production.apk``. Ele pode ser utilizado para testar o aplicativo. Mas de qualquer forma, abaixo há um passo a passo de como gerar uma nova apk
+
 ## COIN_TRADER
 
 ----
@@ -76,8 +78,6 @@ Com o adb devidamente configurado, execute o comando
 yarn android:install 
 ```
 Lembrando que este comando só funcionará caso você possua somente um dispositivo android conectado, seja emulador ou aparelho físico. 
-
-> em ultimo caso, utilize o arquivo ``coin_trader_production.apk`` encontrado na raiz do projeto para instalar e testar o aplicativo.
 
 ---
 
