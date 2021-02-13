@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coin_trader/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,17 +72,17 @@
       <screen x="0" y="27" width="1366" height="697" />
     </state>
     <state x="464" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.697@0.27.1366.697" timestamp="1613250935902" />
-    <state x="372" y="113" width="994" height="580" key="find.popup" timestamp="1613246783730">
+    <state x="372" y="113" width="994" height="580" key="find.popup" timestamp="1613252149217">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="372" y="113" width="994" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1613246783730" />
+    <state x="372" y="113" width="994" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1613252149217" />
     <state x="347" y="164" key="run.anything.popup" timestamp="1613232057681">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
     <state x="347" y="164" key="run.anything.popup/0.27.1366.697@0.27.1366.697" timestamp="1613232057681" />
-    <state x="346" y="45" width="672" height="678" key="search.everywhere.popup" timestamp="1613097001884">
+    <state x="346" y="45" width="672" height="678" key="search.everywhere.popup" timestamp="1613252338123">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="346" y="45" width="672" height="678" key="search.everywhere.popup/0.27.1366.697@0.27.1366.697" timestamp="1613097001884" />
+    <state x="346" y="45" width="672" height="678" key="search.everywhere.popup/0.27.1366.697@0.27.1366.697" timestamp="1613252338123" />
   </component>
 </project>

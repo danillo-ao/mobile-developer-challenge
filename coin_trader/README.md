@@ -21,19 +21,29 @@ react-native: 0.62.2
  ---
 ### Uso em ambiente local (debug)
 instale as dependências do projeto <br />
-`` $ yarn ``
+```bash
+yarn
+```
  
 execute o servidor local do react <br />
-`` $ yarn start --reset-cache ``
+```bash
+yarn start --reset-cache
+```
 
 rode o aplicativo em um emulador ou aparelho físico <br />
-`` $ yarn android `` ou `` $ npx react-native run-android ``
+```bash
+yarn android 
+- ou - 
+npx react-native run-android
+```
 
 ##### - debugando o redux
 para inspecionar a estrutura da store, e chamada de actions do redux, você irá precisar da extensão [Redux Devtools](https://addons.mozilla.org/pt-BR/firefox/addon/reduxdevtools/) instalada no seu navegador.
 
-Com a extensão instalada, no seu terminal, execute o comando <br />
-``$ yarn dev `` 
+Com a extensão instalada, no seu terminal, execute o comando
+```bash
+yarn dev
+``` 
 
 
 Este comando irá executar um servidor na porta **_8000_** 
@@ -48,13 +58,23 @@ Quando o aplicativo carregar novamente, você poderá ver no popup, a estrutura 
 
 ---
 
-#### Uso em ambiente de produção.
-• Buildar a apk <br/>
-``$ yarn android:build``
+### Uso em ambiente de produção.
+• Buildar a apk
+```bash
+yarn android:build
+```
+
+• Caso o build apresente alguma falha, execute o comando abaixo, e tente novamente.
+```bash
+yarn android:clean
+```
 
 • Instalar a versão gerada <br/>
 Para instalar a apk gerada, você precisa ter o [adb](https://developer.android.com/studio/command-line/adb?hl=pt-br) configurado no seu ambiente. <br/>
-Com o adb devidamente configurado, execute o comando <br/>
-``$ yarn android:install `` <br/>
+Com o adb devidamente configurado, execute o comando
+```bash
+yarn android:install 
+```
 Lembrando que este comando só funcionará caso você possua somente um dispositivo android conectado, seja emulador ou aparelho físico. 
 
+---
