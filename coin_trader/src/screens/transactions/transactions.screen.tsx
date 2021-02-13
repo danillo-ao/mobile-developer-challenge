@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {connect} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
+import {useSelector} from 'react-redux'
 
 import {Screen} from '@screens/screen.comp';
 import Text from '@components/text/text.comp';
@@ -20,19 +20,19 @@ import {OrderTransaction} from '@redux/reducers/orders/orders.types';
 import {RootReducer} from '@redux/reducers';
 import {TransactionsScreenProps} from '@screens/transactions/transactions.type';
 
-const TransactionsScreen: React.FC<TransactionsScreenProps> = (props: TransactionsScreenProps): React.FunctionComponentElement<TransactionsScreenProps> => {
+const TransactionsScreen: React.FC<TransactionsScreenProps> = (): React.FunctionComponentElement<TransactionsScreenProps> => {
   /** COMPONENT VALUES */
   const navigation = useNavigation();
   /** END OF COMPONENT VALUES */
+  /** REDUX VALUES */
+  const transactions: OrderTransaction[] = useSelector((state: RootReducer) => state.orders.transactions);
+
+  /** END Of REDUX VALUES */
+
 
   const organizeTransactions = (a, b) => {
-    if (a.transaction_date > b.transaction_date){
-      return -1;
-    }
-    if (a.transaction_date < b.transaction_date){
-      return 1;
-    }
-
+    if (a.transaction_date > b.transaction_date){ return -1; }
+    if (a.transaction_date < b.transaction_date){ return 1; }
     return 0;
   }; // organizeTransactions
 
@@ -69,13 +69,13 @@ const TransactionsScreen: React.FC<TransactionsScreenProps> = (props: Transactio
       <TransactionsFlatList
         ListHeaderComponent={renderWallet}
         ListEmptyComponent={renderEmptyTransactions}
-        data={props.store.transactions.sort(organizeTransactions)}
+        data={transactions.sort(organizeTransactions)}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
       />
 
       <ButtonWrapper>
-        <Button onPress={() => { navigation.navigate(routes.order) }}>
+        <Button onPress={() => { navigation.navigate(routes.order); }}>
           Nova ordem
         </Button>
       </ButtonWrapper>
@@ -84,10 +84,4 @@ const TransactionsScreen: React.FC<TransactionsScreenProps> = (props: Transactio
   );
 };
 
-const mapStateToProps = (state: RootReducer) => ({
-  store: {
-    transactions: state.orders.transactions
-  },
-});
-
-export default connect(mapStateToProps, null)(TransactionsScreen);
+export default TransactionsScreen;

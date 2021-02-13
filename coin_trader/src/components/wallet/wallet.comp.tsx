@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {get} from 'lodash';
-import {connect} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import {WalletProps} from '@components/wallet/wallet.types';
 import {
@@ -18,24 +18,28 @@ import {getThemeColor} from '@theme/theme.utils';
 import imagesUris from '@values/images.values';
 import {parseBtc, currencyFormat} from '@utils/currency.util';
 import {RootReducer} from '@redux/reducers';
-import {bindActionCreators, Dispatch} from 'redux';
 import {getBitcoinsData} from '@redux/actions/bitcoins.actions';
 
 
-const Wallet: React.FC<WalletProps> = (props: WalletProps): React.FunctionComponentElement<WalletProps> => {
+const Wallet: React.FC<WalletProps> = (): React.FunctionComponentElement<WalletProps> => {
 
+  /** COMPONENTS VALUES */
+  const dispatch = useDispatch();
+
+  const brl: number = useSelector((state: RootReducer) => state.wallet.brl) ?? 0;
+  const btc: number = useSelector((state: RootReducer) => state.wallet.btc) ?? 0;
+  const btcUnit: number = useSelector((state: RootReducer) => state.wallet.btc_unit) ?? 0;
+  const error: boolean = useSelector((state: RootReducer) => state.bitcoin.error) ?? false;
+  /** END OF COMPONENTS VALUES */
+  /** STATES */
   const [visible, setVisible] = React.useState<boolean>(true);
   const [refetching, setRefetching] = React.useState<boolean>(false);
-
-  const brl: number = get(props, ['store', 'wallet', 'brl'], 0);
-  const btc: number = get(props, ['store', 'wallet', 'btc'], 0);
-  const btcUnit: number = get(props, ['store', 'wallet', 'btc_unit'], 0);
-  const error: boolean = get(props, ['store', 'errorBtc'], false);
+  /** END OF STATES */
 
   const refetchBitcoinsData = async () => {
     if (!refetching) {
       setRefetching(true);
-      await props.actions.getBitcoinsData();
+      await dispatch(getBitcoinsData());
       setRefetching(false);
     }
   }; // refetchBitcoinsData
@@ -87,17 +91,4 @@ const Wallet: React.FC<WalletProps> = (props: WalletProps): React.FunctionCompon
   );
 };
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  actions: bindActionCreators({
-    getBitcoinsData,
-  }, dispatch),
-});
-
-const mapStateToProps = (state: RootReducer) => ({
-  store: {
-    errorBtc: state.bitcoin.error,
-    wallet: state.wallet,
-  },
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
+export default Wallet;

@@ -9,21 +9,21 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps): React.FunctionCompon
    * used to handle the press function;
    * if it is defined, run it, if isnt, do nothing
    */
-  const handlePress = (): void => {
+  const handlePress = React.useCallback((): void => {
     if (!!props.onPress) {
       props.onPress();
     }
-  }; // handlePress
+  }, [props]); // handlePress
 
   /**
    * Render the child element based on the type
    */
-  const renderChild = () => {
+  const renderChild = React.useCallback(() => {
     if (typeof props.children === 'string') {
       return <Text color="black" family="defaultBold">{props.children}</Text>;
     }
     return props.children;
-  }; // renderChild
+  }, [props]); // renderChild
 
   return (
     <ButtonComp onPress={handlePress} activeOpacity={!!props.onPress ? 0.7 : 1}>

@@ -32,5 +32,5 @@ export const getBitcoinsData = () => async (dispatch: Dispatch<Action>, getState
     // error on get bitcoins data
     dispatch({ type: actionType.ERROR_BITCOINS_DATA });
   }
-};
+}; // getBitcoinsData
 

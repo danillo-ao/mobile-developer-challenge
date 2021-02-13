@@ -15,6 +15,9 @@ export const ordersReducer = (state: OrdersReducer = initialState, action: Actio
       newState.transactions.push(action.payload);
       return newState;
 
+    case actionType.CLEAR_ORDERS_TRANSACTIONS:
+      return initialState;
+
     default:
       return state;
   }

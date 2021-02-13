@@ -1,9 +1,8 @@
 import * as React from 'react';
 import {ActivityIndicator, Animated} from 'react-native';
 import Clipboard from '@react-native-community/clipboard';
-import {connect} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {bindActionCreators, Dispatch} from 'redux';
-import {get} from 'lodash';
 import {useNavigation} from '@react-navigation/native';
 
 import {Screen, ScreenScroll, ScreenScrollInner} from '@screens/screen.comp';
@@ -43,12 +42,14 @@ import Icon from '@components/icons/icon.comp';
 import {OrderTransaction, orderTransactionTypes, TransactionType} from '@redux/reducers/orders/orders.types';
 import {buyOrder, sellOrder} from '@redux/actions/orders.actions';
 
-const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React.FunctionComponentElement<OrderScreenProps> => {
+const OrderScreen: React.FC<OrderScreenProps> = (): React.FunctionComponentElement<OrderScreenProps> => {
 
   /** COMPONENT VALUES */
   const navigation = useNavigation();
-  const bitcoin: BitcoinReducer = get(props, ['store', 'bitcoin']);
-  const wallet: WalletReducer = get(props, ['store', 'wallet']);
+  const dispatch = useDispatch();
+
+  const bitcoin: BitcoinReducer = useSelector((state: RootReducer) => state.bitcoin);
+  const wallet: WalletReducer = useSelector((state: RootReducer) => state.wallet);
   /** END OF COMPONENT VALUES */
   /** STATES **/
   const [isSellOrder, setIsSellOrder] = React.useState<boolean>(false);
@@ -84,9 +85,9 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
    * used once when the screen become focused
    */
   const fetchBitcoins = React.useCallback(async () => {
-    await props.actions.getBitcoinsData();
+    await dispatch(getBitcoinsData());
     setFetching(false);
-  }, [props.actions]);
+  }, [dispatch]);
 
   /**
    * Used to manually refetch the bitcoin data
@@ -120,7 +121,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
    * Used to set a value to sell or buy, using shortcut
    * @param percent
    */
-  const shortcutValue = (percent: number): void => {
+  const shortcutValue = React.useCallback((percent: number): void => {
     // if the order is a sell type, the shortcut must be used to btc units
     if (isSellOrder) {
       const value = ((wallet.btc_unit * percent) / 100);
@@ -132,7 +133,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
       setBuyValue(value);
     }
 
-  }; // shortcutValue
+  }, [isSellOrder, wallet]); // shortcutValue
 
   /**
    * copy the bitcoin value to clipboard
@@ -147,7 +148,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
    * if the order is successfully saved, return to the transactions screen
    * @param orderType
    */
-  const finishOrder = async (orderType: TransactionType): Promise<void> => {
+  const finishOrder = React.useCallback(async (orderType: TransactionType): Promise<void> => {
     setFinishingOrder(true);
     const buyUnits: number = (buyValue / bitcoin.last);
     const payload: OrderTransaction = {
@@ -160,9 +161,9 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
     // execute the order based on their type
     let result;
     if (orderType === orderTransactionTypes.buy) {
-      result = await props.actions.buyOrder(payload);
+      result = await dispatch(buyOrder(payload));
     } else {
-      result = await props.actions.sellOrder(payload);
+      result = await dispatch(sellOrder(payload));
     }
 
     setFinishingOrder(false);
@@ -173,7 +174,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
     } else {
       snackbar.show('Não foi possivel finalizar esta ordem. Por favor, tente novamente.', 'error');
     }
-  }; // finishOrder
+  }, [dispatch, bitcoin, buyValue, navigation, orderResultSell, sellQuantity, snackbar]); // finishOrder
 
 
   /**
@@ -372,20 +373,4 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
   );
 };
 
-
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  actions: bindActionCreators({
-    getBitcoinsData,
-    buyOrder,
-    sellOrder,
-  }, dispatch),
-});
-
-const mapStateToProps = (state: RootReducer) => ({
-  store: {
-    bitcoin: state.bitcoin,
-    wallet: state.wallet,
-  },
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(OrderScreen);
+export default OrderScreen;

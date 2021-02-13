@@ -1,5 +1,1 @@
-export type HomeScreenProps = {
-  actions?: {
-    getBitcoinsData(): Promise<void>;
-  }
-};
+export type HomeScreenProps = {};

@@ -28,6 +28,9 @@ export const walletReducer = (state: WalletReducer = initialState, action: Actio
     case actionType.SAVE_WALLET_BALANCE:
       return action.payload;
 
+    case actionType.CLEAR_WALLET:
+      return initialState;
+
     default:
       return state;
   }

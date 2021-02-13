@@ -4,6 +4,10 @@ import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 import {actionType} from '@redux/actions/actions.types';
 
 
+/**
+ * used to buy some bitcoins units
+ * @param payload
+ */
 export const buyOrder = (payload: OrderTransaction) => async (dispatch: Dispatch, getState) => {
   try {
 
@@ -21,8 +25,12 @@ export const buyOrder = (payload: OrderTransaction) => async (dispatch: Dispatch
   } catch (e) {
     return false;
   }
-};
+}; // buyOrder
 
+/**
+ * Used to sell some bitcoins units
+ * @param payload
+ */
 export const sellOrder = (payload: OrderTransaction) => async (dispatch: Dispatch, getState) => {
   try {
 
@@ -41,4 +49,19 @@ export const sellOrder = (payload: OrderTransaction) => async (dispatch: Dispatc
   } catch (e) {
     return false;
   }
-};
+}; // sellOrder
+
+/**
+ * used to clear the transaction history and wallet balance
+ */
+export const clearHistory = () => async (dispatch: Dispatch) => {
+  try {
+
+    dispatch({ type: actionType.CLEAR_ORDERS_TRANSACTIONS });
+    dispatch({ type: actionType.CLEAR_WALLET });
+
+    return true;
+  } catch (e) {
+    return false;
+  }
+}; // clearHistory

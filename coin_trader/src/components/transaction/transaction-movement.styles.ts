@@ -30,7 +30,7 @@ export const TransactionMovementIconImg = styled.Image<{ color?: string }>`
   height: 30px;
   position: relative;
   resizeMode: contain;
-  tintColor: ${({ color }) => !!color ? color : getThemeColor('secondary')}
+  tint-color: ${({ color }) => !!color ? color : getThemeColor('secondary')}
 `;
 
 export const TransactionMovementDetails = styled.View`

@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps): React.FunctionCompon
   /**
    * Render the go back action if is possible and abled
    */
-  const renderGoBack = (): React.FunctionComponentElement<any> => {
+  const renderGoBack = React.useCallback((): React.FunctionComponentElement<any> => {
     if (navigation.canGoBack() && props.hasGoBack) {
       return (
         <HeaderActionPress onPress={() => { navigation.goBack(); }}>
@@ -21,13 +21,13 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps): React.FunctionCompon
         </HeaderActionPress>
       );
     }
-  }; // renderGoBack
+  }, [props, navigation]); // renderGoBack
 
 
   /**
    * Render a custom action in header if it was settted
    */
-  const renderHeaderAction = (): React.FunctionComponentElement<any> => {
+  const renderHeaderAction = React.useCallback((): React.FunctionComponentElement<any> => {
     if (!!props.actionIcon && !!props.action) {
       return (
         <HeaderActionPress onPress={() => { props.action(); }}>
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps): React.FunctionCompon
     }
 
     return null;
-  }; // renderHeaderAction
+  }, [props]); // renderHeaderAction
 
   return (
     <HeaderComp>
