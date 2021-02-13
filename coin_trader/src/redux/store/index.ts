@@ -17,7 +17,7 @@ const persistConfig = {
   key: 'root-persist',
   stateReconciler: autoMergeLevel2,
   storage: AsyncStorage,
-  whitelist: ['transfers'],
+  whitelist: ['wallet', 'orders'],
 };
 
 const pReducer = persistReducer(persistConfig, rootReducer);

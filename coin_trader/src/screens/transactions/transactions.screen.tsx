@@ -32,7 +32,7 @@ const TransactionsScreen: React.FC<TransactionsScreenProps> = (props: Transactio
     if (a.transaction_date < b.transaction_date){
       return 1;
     }
-    
+
     return 0;
   }; // organizeTransactions
 
