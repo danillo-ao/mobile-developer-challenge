@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/drawable/background_splash.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/layout/launch_screen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/values/colors.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/order/order.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/order/order.styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/src/utils/date.util.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/utils/date.util.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/coin_trader/src/redux/reducers/wallet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../chords" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
-      <workItem from="1612895985938" duration="94898000" />
+      <workItem from="1612895985938" duration="96962000" />
     </task>
     <servers />
   </component>
@@ -76,14 +70,14 @@
       <screen x="0" y="27" width="1366" height="697" />
     </state>
     <state x="385" y="176" width="585" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.697@0.27.1366.697" timestamp="1612916280725" />
-    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1613005086915">
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl" timestamp="1613242760696">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1613005086915" />
-    <state x="374" y="113" width="963" height="580" key="find.popup" timestamp="1613240043446">
+    <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1613242760696" />
+    <state x="374" y="113" width="963" height="580" key="find.popup" timestamp="1613243662188">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="374" y="113" width="963" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1613240043446" />
+    <state x="374" y="113" width="963" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1613243662188" />
     <state x="347" y="164" key="run.anything.popup" timestamp="1613232057681">
       <screen x="0" y="27" width="1366" height="697" />
     </state>

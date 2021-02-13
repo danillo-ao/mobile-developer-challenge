@@ -14,6 +14,7 @@
  *
  */
 import * as React from 'react';
+import SplashScreen from 'react-native-splash-screen'
 
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/lib/integration/react';
@@ -31,6 +32,9 @@ if (__DEV__) {
 }
 
 const App = () => {
+
+  React.useEffect(() => { SplashScreen.hide(); }, []);
+
   return (
     <Provider store={reduxStore}>
       <PersistGate loading={null} persistor={reduxStorePersisted}>
