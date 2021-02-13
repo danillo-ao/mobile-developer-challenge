@@ -77,6 +77,8 @@ yarn android:install
 ```
 Lembrando que este comando só funcionará caso você possua somente um dispositivo android conectado, seja emulador ou aparelho físico. 
 
+> em ultimo caso, utilize o arquivo ``coin_trader_production.apk`` encontrado na raiz do projeto para instalar e testar o aplicativo.
+
 ---
 
 ### Ferramentas de debug utilizadas
