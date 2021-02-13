@@ -14,7 +14,6 @@ export const getDate = (date: number, isEpoch?: boolean): string => {
   const minutes = _date.getMinutes();
   const fixedMonth = month < 10 ? `0${month}` : month;
   const fixedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-  const fixedHours = hours < 20 ? hours - 1 : hours;
 
-  return `${day}/${fixedMonth}/${year} - ${fixedHours}h${fixedMinutes}`;
+  return `${day}/${fixedMonth}/${year} - ${hours}h${fixedMinutes}`;
 }; // getDate

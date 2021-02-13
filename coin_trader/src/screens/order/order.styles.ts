@@ -18,6 +18,7 @@ export const OrderPriceValue = styled.View`
   flex-direction: row;
   align-items: center;
   padding: ${({ theme }) => (theme.units.padding / 2)}px;
+  max-height: 31px;
 `;
 
 export const OrderPriceDetails = styled.View`
@@ -25,6 +26,7 @@ export const OrderPriceDetails = styled.View`
   flex-direction: row;
   opacity: 0.7;
   justify-content: space-between;
+  min-height: 15px;
 `;
 
 
