@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/drawable/background_splash.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/layout/launch_screen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
-      <workItem from="1612895985938" duration="96962000" />
+      <workItem from="1612895985938" duration="97025000" />
     </task>
     <servers />
   </component>
