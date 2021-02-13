@@ -1,8 +1,11 @@
 import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 
 export type WalletProps = {
-  store: {
+  actions?: {
+    getBitcoinsData(): Promise<void>;
+  };
+  store?: {
     errorBtc: boolean;
-    wallet: WalletReducer
+    wallet: WalletReducer;
   }
 };

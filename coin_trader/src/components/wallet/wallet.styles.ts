@@ -24,6 +24,14 @@ export const WalletActions = styled.View`
   align-items: center;
 `;
 
+export const WalletActionsGroup = styled.View`
+  flex-direction: row;
+`;
+
+export const WalletAction = styled.TouchableOpacity`
+  margin-left: ${({ theme }) => theme.units.padding}px;
+`;
+
 export const WalletBalance = styled.View`
   width: 100%;
   flex-direction: row;
