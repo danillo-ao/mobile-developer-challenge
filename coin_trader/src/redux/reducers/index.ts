@@ -13,10 +13,12 @@ export type RootReducer = {
   wallet: WalletReducer
 }
 
-const rootReducer = combineReducers({
+export const reducers = {
   bitcoin: bitcoinReducer,
   wallet: walletReducer,
   orders: ordersReducer,
-});
+};
+
+const rootReducer = combineReducers({ ...reducers });
 
 export default rootReducer;

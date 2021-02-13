@@ -4,7 +4,7 @@ import {
   colors,
   fonts,
   fontSizes,
-  units
+  units,
 } from '@theme/theme.values';
 
 const theme: Theme = {

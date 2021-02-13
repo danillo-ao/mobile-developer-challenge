@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/coin_trader/__tests__/button.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/__tests__/test.utils.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.provider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/__tests__/App-test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/bitcoin/bitcoin.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/bitcoin/bitcoin.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
-      <workItem from="1612895985938" duration="89735000" />
+      <workItem from="1612895985938" duration="92470000" />
     </task>
     <servers />
   </component>

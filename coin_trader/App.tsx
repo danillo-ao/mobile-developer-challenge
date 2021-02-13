@@ -14,17 +14,16 @@
  *
  */
 import * as React from 'react';
-import {ThemeProvider} from 'styled-components/native';
 
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/lib/integration/react';
 import reduxStore, { reduxStorePersisted} from '@redux/store';
 
 import {StatusBar} from 'react-native';
-import theme from '@theme/theme';
 import Router from '@router/router.comp';
 import {getThemeColor} from '@theme/theme.utils';
 import Snackbar from '@components/snackbar/snackbar.comp';
+import ThemeProvider from '@theme/theme.provider';
 
 
 if (__DEV__) {
@@ -35,7 +34,7 @@ const App = () => {
   return (
     <Provider store={reduxStore}>
       <PersistGate loading={null} persistor={reduxStorePersisted}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider>
 
           <Snackbar>
             <StatusBar backgroundColor={getThemeColor('primary')} barStyle="dark-content" />
