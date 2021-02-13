@@ -33,6 +33,7 @@ export const colors: ThemeColorShade = {
     lighter: '#333333' as '#333333',
   },
   red: {
+    lighter: '#FF666F' as '#FF666F',
     base: '#DB0611' as '#DB0611',
   },
   green: {

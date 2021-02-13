@@ -1,11 +1,13 @@
 import * as React from 'react';
-import {Screen, ScreenScroll, ScreenScrollInner} from '@screens/screen.comp';
 import {ActivityIndicator, Animated} from 'react-native';
-import { connect } from 'react-redux';
-import { bindActionCreators, Dispatch } from 'redux';
-import { RootReducer } from '@redux/reducers';
+import Clipboard from '@react-native-community/clipboard';
+import {connect} from 'react-redux';
+import {bindActionCreators, Dispatch} from 'redux';
+import {get} from 'lodash';
+import {useNavigation} from '@react-navigation/native';
 
-import { get } from 'lodash';
+import {Screen, ScreenScroll, ScreenScrollInner} from '@screens/screen.comp';
+import {RootReducer} from '@redux/reducers';
 
 import Text from '@components/text/text.comp';
 import Header from '@components/headers/header.comp';
@@ -25,8 +27,10 @@ import {
   OrderShortcutsValues,
   OrderType,
   OrderTypes,
-  OrderLineRow,
+  OrderLineRow, CopyToClipboardAction, BitcoinLastPriceTitle,
 } from '@screens/order/order.styles';
+import {SnackbarContext} from '@components/snackbar/snackbar.comp';
+import {SnackbarContextValues} from '@components/snackbar/snackbar.types';
 import Button from '@components/button/button.comp';
 import {getDate} from '@utils/date.util';
 import {OrderScreenProps} from '@screens/order/order.types';
@@ -35,20 +39,30 @@ import {getThemeColor} from '@theme/theme.utils';
 import {parseBtc, currencyFormat} from '@utils/currency.util';
 import {BitcoinReducer} from '@redux/reducers/bitcoin/bitcoin.types';
 import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
+import Icon from '@components/icons/icon.comp';
+import {OrderTransaction, orderTransactionTypes, TransactionType} from '@redux/reducers/orders/orders.types';
+import {buyOrder, sellOrder} from '@redux/actions/orders.actions';
 
 const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React.FunctionComponentElement<OrderScreenProps> => {
 
+  /** COMPONENT VALUES */
+  const navigation = useNavigation();
   const bitcoin: BitcoinReducer = get(props, ['store', 'bitcoin']);
   const wallet: WalletReducer = get(props, ['store', 'wallet']);
-
-  const [sellOrder, setSellOrder] = React.useState<boolean>(false);
+  /** END OF COMPONENT VALUES */
+  /** STATES **/
+  const [isSellOrder, setIsSellOrder] = React.useState<boolean>(false);
   const [fetching, setFetching] = React.useState<boolean>(true);
   const [animation] = React.useState<Animated.Value>(new Animated.Value(1));
 
+  const [finishingOrder, setFinishingOrder] = React.useState<boolean>(false);
   const [buyValue, setBuyValue] = React.useState<number>(0);
   const [sellQuantity, setSellQuantity] = React.useState<number>(0);
   const [orderResultSell, setOrderResultSell] = React.useState<number>(0);
   const [orderResultBuy, setOrderResultBuy] = React.useState<number>(0);
+  /** END OF STATES **/
+  /** CONTEXTS **/
+  const snackbar: SnackbarContextValues = React.useContext(SnackbarContext);
 
   React.useEffect(() => {
     // btc unit
@@ -92,12 +106,12 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
    */
   const handleOrderType = (orderType): void => {
     // only change the value and run the animation if both as different
-    if (orderType !== sellOrder) {
+    if (orderType !== isSellOrder) {
       Animated.sequence([
         Animated.timing(animation, { toValue: 0.1, duration: 200, useNativeDriver: true }),
         Animated.timing(animation, { toValue: 1, duration: 200, useNativeDriver: true }),
       ]).start();
-      setTimeout(() => { setSellOrder(orderType); }, 100);
+      setTimeout(() => { setIsSellOrder(orderType); }, 100);
     }
   }; // handleOrderType
 
@@ -108,7 +122,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
    */
   const shortcutValue = (percent: number): void => {
     // if the order is a sell type, the shortcut must be used to btc units
-    if (sellOrder) {
+    if (isSellOrder) {
       const value = ((wallet.btc_unit * percent) / 100);
       setSellQuantity(value);
 
@@ -120,6 +134,82 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
 
   }; // shortcutValue
 
+  /**
+   * copy the bitcoin value to clipboard
+   */
+  const copyToClipboard = (): void => {
+    Clipboard.setString(`Cotação atual do Bitcoin: R$ ${currencyFormat(bitcoin.last)}`);
+    snackbar.show('Copiado para a área de transferência!');
+  }; // copyToClipboard
+
+  /**
+   * Used to create the payload and finish the order based on their type
+   * if the order is successfully saved, return to the transactions screen
+   * @param orderType
+   */
+  const finishOrder = async (orderType: TransactionType): Promise<void> => {
+    setFinishingOrder(true);
+    const buyUnits: number = (buyValue / bitcoin.last);
+    const payload: OrderTransaction = {
+      transaction_units: orderType === orderTransactionTypes.buy ? buyUnits : sellQuantity,
+      transaction_amount: orderType === orderTransactionTypes.buy ? buyValue : orderResultSell,
+      transaction_date: Date.now(),
+      transaction_type: orderType,
+    };
+
+    // execute the order based on their type
+    let result;
+    if (orderType === orderTransactionTypes.buy) {
+      result = await props.actions.buyOrder(payload);
+    } else {
+      result = await props.actions.sellOrder(payload);
+    }
+
+    setFinishingOrder(false);
+
+    if (result) {
+      snackbar.show('Ordem finalizada com sucesso!', 'success');
+      navigation.goBack();
+    } else {
+      snackbar.show('Não foi possivel finalizar esta ordem. Por favor, tente novamente.', 'error');
+    }
+  }; // finishOrder
+
+
+  /**
+   * Used to validate the sell conditions and finish the order
+   */
+  const sellBitcoins = async (): Promise<void> => {
+    // minimum quantity to sell
+    if (sellQuantity < 0.0000001) {
+      snackbar.show('Para vender Bitcoins, você deve preencher um valor de pelo menos 0.0000001');
+      return;
+    }
+    if (sellQuantity > wallet.btc_unit) {
+      snackbar.show('Unidades de bitcoin insuficientes', 'error');
+      return;
+    }
+
+    await finishOrder(orderTransactionTypes.sell);
+  }; // sellBitcoins
+
+  /**
+   * Used to validate the buy conditions and finish the order
+   */
+  const buyBitcoins = async (): Promise<void> => {
+
+    if (buyValue < 1) {
+      snackbar.show('Para comprar Bitcoins, você deve preencher um valor de pelo menos R$ 1,00');
+      return;
+    }
+    if (buyValue > wallet.brl) {
+      snackbar.show('Saldo insuficiente', 'error');
+      return;
+    }
+
+    await finishOrder(orderTransactionTypes.buy);
+  }; // buyBitcoins
+
 
   /**
    * ----------------
@@ -130,61 +220,67 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
   /**
    * Render the input for how much the user will buy
    */
-  const renderBuyValue = (): React.FunctionComponentElement<any> => (
+  const renderBuyValue = React.useCallback((): React.FunctionComponentElement<any> => (
     <OrderLine>
       <OrderLineRow>
         <Text>Valor</Text>
-        <Text style={{ opacity: 0.4 }}>Valor mínimo: R$ 1,00</Text>
+        <Text style={{ opacity: 0.4 }}>mínimo: R$ 1,00</Text>
       </OrderLineRow>
       <OrderCurrencyInput value={buyValue} unit="R$ " onChangeValue={setBuyValue} />
     </OrderLine>
-  ); // renderBuyValue
+  ), [buyValue]); // renderBuyValue
 
   /**
    * Render the input for how much the user will sell
    */
-  const renderSellValue = (): React.FunctionComponentElement<any> => (
+  const renderSellValue = React.useCallback((): React.FunctionComponentElement<any> => (
     <OrderLine>
-      <Text>Quantidade</Text>
+      <OrderLineRow>
+        <Text>Quantidade</Text>
+        <Text style={{ opacity: 0.4 }}>unid. {parseBtc(wallet.btc_unit, 8)}</Text>
+      </OrderLineRow>
       <OrderCurrencyInput value={sellQuantity} precision={8} onChangeValue={setSellQuantity} />
     </OrderLine>
-  ); // renderSellValue
+  ), [sellQuantity, wallet.btc_unit]); // renderSellValue
 
   /**
    * Render the result of the order in brl
    */
-  const renderOrderResultSell = (): React.FunctionComponentElement<any> => (
-    <OrderLine largeMargin>
+  const renderOrderResultSell = React.useCallback((): React.FunctionComponentElement<any> => (
+    <OrderLine lgm>
       <Text color="green">Quantidade em Reais:</Text>
       <Text color="primary" shade="lighter">R$ {currencyFormat(orderResultSell)}</Text>
     </OrderLine>
-  ); // renderOrderResultSell
+  ), [orderResultSell]); // renderOrderResultSell
 
   /**
    * Render the result of the order in bitcoun units
    */
-  const renderOrderResultBuy = (): React.FunctionComponentElement<any> => (
-    <OrderLine largeMargin>
+  const renderOrderResultBuy = React.useCallback((): React.FunctionComponentElement<any> => (
+    <OrderLine lgm>
       <Text color="green">Quantidade em Bitcoins</Text>
       <Text color="primary" shade="lighter">{parseBtc(orderResultBuy)}</Text>
     </OrderLine>
-  ); // renderOrderResultBuy
+  ), [orderResultBuy]); // renderOrderResultBuy
 
 
   return (
     <Screen>
-      <Header
-        title="Nova Ordem"
-        actionIcon="refresh-cw"
-        action={refetchBitcoins}
-      />
+      <Header title="Nova Ordem" actionIcon="refresh-cw" action={refetchBitcoins} />
 
       <ScreenScroll>
         <ScreenScrollInner>
 
           <OrderPrice>
 
-            <Text>Ultimo preço</Text>
+            <BitcoinLastPriceTitle>
+              <Text>Ultimo preço</Text>
+              {(!fetching) && (
+                <CopyToClipboardAction onPress={copyToClipboard}>
+                  <Icon name="copy" color={getThemeColor('white')} size={19} />
+                </CopyToClipboardAction>
+              )}
+            </BitcoinLastPriceTitle>
 
             <OrderPriceValue>
               <Text size="ssm" style={{ marginRight: 5 }}>R$</Text>
@@ -201,26 +297,26 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
 
           </OrderPrice>
 
-          <OrderLine noMargin>
+          <OrderLine nm>
             <OrderTypes>
               <OrderType onPress={() => { handleOrderType(false); }}>
-                <Text size="xl" color={sellOrder ? 'white' : 'primary'}>Comprar</Text>
+                <Text size="xl" color={isSellOrder ? 'white' : 'primary'}>Comprar</Text>
               </OrderType>
-              <Toggle selected={sellOrder} onChange={handleOrderType}/>
+              <Toggle selected={isSellOrder} onChange={handleOrderType}/>
               <OrderType onPress={() => { handleOrderType(true); }}>
-                <Text size="xl" color={!sellOrder ? 'white' : 'primary'}>Vender</Text>
+                <Text size="xl" color={!isSellOrder ? 'white' : 'primary'}>Vender</Text>
               </OrderType>
             </OrderTypes>
           </OrderLine>
 
 
-          <OrderLine largeMargin>
+          <OrderLine lgm>
             <Text>Ativo</Text>
             <Text color="primary" shade="lighter">BTC</Text>
           </OrderLine>
 
           <Animated.View style={{ opacity: animation }}>
-            {sellOrder ? renderSellValue() : renderBuyValue()}
+            {isSellOrder ? renderSellValue() : renderBuyValue()}
             <OrderShortcutsValues>
               <OrderShortcut>
                 <OrderShortcutAction onPress={() => { shortcutValue(25); }}>
@@ -244,7 +340,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
               </OrderShortcut>
             </OrderShortcutsValues>
 
-            {sellOrder ? renderOrderResultSell() : renderOrderResultBuy()}
+            {isSellOrder ? renderOrderResultSell() : renderOrderResultBuy()}
           </Animated.View>
 
           <OrderResumeBalance>
@@ -260,7 +356,12 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
             </OrderResumeBalanceInner>
 
             <OrderFinishAction>
-              <Button>{sellOrder ? 'Vender' : 'Comprar'}</Button>
+              <Button onPress={isSellOrder ? sellBitcoins : buyBitcoins}>
+                {(finishingOrder)
+                  ? (<ActivityIndicator size={19} color={getThemeColor('black')} />)
+                  : (isSellOrder ? 'Vender' : 'Comprar')
+                }
+              </Button>
             </OrderFinishAction>
           </OrderResumeBalance>
 
@@ -275,6 +376,8 @@ const OrderScreen: React.FC<OrderScreenProps> = (props: OrderScreenProps): React
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   actions: bindActionCreators({
     getBitcoinsData,
+    buyOrder,
+    sellOrder,
   }, dispatch),
 });
 

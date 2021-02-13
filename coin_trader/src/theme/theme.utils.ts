@@ -1,6 +1,6 @@
 import theme from './theme';
 import {ColorsName, ColorsShade} from '@theme/theme.type';
-import { get } from 'lodash';
+import {get} from 'lodash';
 
 /**
  * used to get a theme color with an optional shade

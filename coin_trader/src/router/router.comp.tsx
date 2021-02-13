@@ -1,8 +1,8 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { Animated } from 'react-native';
+import {Animated} from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, StackCardStyleInterpolator} from '@react-navigation/stack';
 
 import routes from '@router/routes.config';

@@ -2,13 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/snackbar/snackbar.comp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/snackbar/snackbar.styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/snackbar/snackbar.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/components/transaction/transaction-movement.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/headers/header.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/headers/header.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/text/text.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/text/text.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/toggle/toggle.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/toggle/toggle.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.comp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/wallet/wallet.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/actions/actions.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/actions/actions.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/actions/bitcoins.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/actions/bitcoins.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/actions/orders.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/actions/orders.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/actions/wallet.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/transaction/transaction-movement.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/bitcoin/bitcoin.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/bitcoin/bitcoin.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/orders/orders.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/orders/orders.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/orders/orders.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/orders/orders.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/reducers/wallet/wallet.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/reducers/wallet/wallet.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/redux/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/redux/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/router/router.comp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/router/router.comp.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/home/home.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/home/home.screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/home/home.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/home/home.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/order/order.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/order/order.screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/order/order.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/order/order.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/order/order.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/order/order.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/screen.comp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/screen.comp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/transactions/transactions.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/sdk/client/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/sdk/client/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/theme/theme.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/theme/theme.values.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/theme/theme.values.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
-      <workItem from="1612895985938" duration="65201000" />
+      <workItem from="1612895985938" duration="81136000" />
     </task>
     <servers />
   </component>
@@ -73,10 +100,10 @@
       <screen x="0" y="27" width="1366" height="697" />
     </state>
     <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1613005086915" />
-    <state x="374" y="113" width="963" height="580" key="find.popup" timestamp="1613091187167">
+    <state x="374" y="113" width="963" height="580" key="find.popup" timestamp="1613179532239">
       <screen x="0" y="27" width="1366" height="697" />
     </state>
-    <state x="374" y="113" width="963" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1613091187167" />
+    <state x="374" y="113" width="963" height="580" key="find.popup/0.27.1366.697@0.27.1366.697" timestamp="1613179532239" />
     <state x="347" y="164" key="run.anything.popup" timestamp="1613162205042">
       <screen x="0" y="27" width="1366" height="697" />
     </state>

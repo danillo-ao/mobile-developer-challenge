@@ -37,6 +37,16 @@ export const OrderTypes = styled.View`
   border-color: ${getThemeColor('primary', 'lighter')};
 `;
 
+export const BitcoinLastPriceTitle = styled.View`
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`;
+
+export const CopyToClipboardAction = styled.TouchableOpacity`
+  margin-left: ${({ theme }) => (theme.units.padding / 2)}px;
+`;
+
 export const OrderType = styled.TouchableOpacity`
   flex: 1;
   align-items: center;
@@ -44,9 +54,9 @@ export const OrderType = styled.TouchableOpacity`
   padding: ${({ theme }) => theme.units.padding}px 0;
 `;
 
-export const OrderLine = styled.View<{ largeMargin?: boolean; noMargin?: boolean }>`
+export const OrderLine = styled.View<{ lgm?: boolean; nm?: boolean }>`
   width: 100%;
-  margin-top: ${({ theme, noMargin, largeMargin }) => noMargin ? 0 : largeMargin ? theme.units.padding * 2 : theme.units.padding}px;
+  margin-top: ${({ theme, nm, lgm }) => nm ? 0 : lgm ? theme.units.padding * 2 : theme.units.padding}px;
   flex-direction: column;
 `;
 
@@ -61,6 +71,7 @@ export const OrderShortcutsValues = styled.View`
   margin-left: -${({ theme }) => (theme.units.padding / 2)}px;
   margin-top: 10px;
   flex-direction: row;
+  min-height: 36px;
 `;
 
 export const OrderShortcut = styled.View`

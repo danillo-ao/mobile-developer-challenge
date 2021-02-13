@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { get } from 'lodash';
+import {get} from 'lodash';
 import {connect} from 'react-redux';
 
 import Reactotron from 'reactotron-react-native';

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/native';
+import styled, { css} from 'styled-components/native';
 import {getThemeColor} from '@theme/theme.utils';
 
 export const WalletComp = styled.View`

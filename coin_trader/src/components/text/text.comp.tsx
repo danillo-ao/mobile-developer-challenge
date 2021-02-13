@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { get } from 'lodash';
+import {get} from 'lodash';
 import styled from 'styled-components/native';
 
 import {TextProps} from '@components/text/text.types';

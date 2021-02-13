@@ -14,13 +14,13 @@
  *
  */
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components/native';
+import {ThemeProvider} from 'styled-components/native';
 
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/lib/integration/react';
-import reduxStore, { reduxStorePersisted } from '@redux/store';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/lib/integration/react';
+import reduxStore, { reduxStorePersisted} from '@redux/store';
 
-import { StatusBar } from 'react-native';
+import {StatusBar} from 'react-native';
 import theme from '@theme/theme';
 import Router from '@router/router.comp';
 import {getThemeColor} from '@theme/theme.utils';

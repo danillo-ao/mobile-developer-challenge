@@ -1,5 +1,5 @@
-import { set, cloneDeep } from 'lodash';
-import {Action} from '@redux/actions/actions.types';
+import {cloneDeep} from 'lodash';
+import {Action, actionType} from '@redux/actions/actions.types';
 import {OrdersReducer} from '@redux/reducers/orders/orders.types';
 
 const initialState: OrdersReducer = {
@@ -10,9 +10,10 @@ export const ordersReducer = (state: OrdersReducer = initialState, action: Actio
   const newState = cloneDeep(state);
 
   switch (action.type) {
-    // case actionType.SAVE_TOKEN:
-    //   set(newState, ["token"], action.payload.token);
-    //   return newState;
+
+    case actionType.SAVE_ORDER_TRANSACTION:
+      newState.transactions.push(action.payload);
+      return newState;
 
     default:
       return state;

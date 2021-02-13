@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 
 import {BitcoinReducer} from '@redux/reducers/bitcoin/bitcoin.types';
 import {bitcoinReducer} from '@redux/reducers/bitcoin/bitcoin.reducer';

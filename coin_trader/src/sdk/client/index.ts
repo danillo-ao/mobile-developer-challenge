@@ -1,4 +1,4 @@
-import { create } from 'apisauce';
+import {create} from 'apisauce';
 
 const client = create({
   baseURL: 'https://www.mercadobitcoin.net/api',

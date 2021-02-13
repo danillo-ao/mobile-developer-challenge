@@ -1,30 +1,27 @@
 import * as React from 'react';
 import {ActivityIndicator, Image} from 'react-native';
-import { connect } from 'react-redux';
-import { bindActionCreators, Dispatch } from 'redux';
-import { useNavigation } from '@react-navigation/native';
+import {connect} from 'react-redux';
+import {bindActionCreators, Dispatch} from 'redux';
+import {useNavigation} from '@react-navigation/native';
 
-import { getBitcoinsData } from '@redux/actions/bitcoins.actions';
+import {getBitcoinsData} from '@redux/actions/bitcoins.actions';
 
 import routes from '@router/routes.config';
-import { Screen } from '@screens/screen.comp';
-import {HomeProps} from '@screens/home/home.types';
+import {Screen} from '@screens/screen.comp';
+import {HomeScreenProps} from '@screens/home/home.types';
 import Text from '@components/text/text.comp';
 import Button from '@components/button/button.comp';
 import imagesUris from '@values/images.values';
 import {getThemeColor} from '@theme/theme.utils';
-import {SnackbarContext} from '@components/snackbar/snackbar.comp';
 
 
-const HomeScreen: React.FC<HomeProps> = (props: HomeProps): React.FunctionComponentElement<HomeProps> => {
-
+const HomeScreen: React.FC<HomeScreenProps> = (props: HomeScreenProps): React.FunctionComponentElement<HomeScreenProps> => {
+  /** COMPONENT VALUES */
   const navigation = useNavigation();
-
+  /** END OF COMPONENT VALUES */
+  /** STATES */
   const [fetching, setFetching] = React.useState<boolean>(false);
-
-  const snackbar = React.useContext(SnackbarContext);
-
-  snackbar.show('testeeeee');
+  /** END OF STATES */
 
   /**
    * Used to fetch the bitcoin data and redirect user to the extract

@@ -3,7 +3,7 @@ import {HeaderProps} from '@components/headers/header.types';
 import {HeaderAction, HeaderActionPress, HeaderComp, HeaderTitleWrapper} from '@components/headers/header.styles';
 
 import Text from '@components/text/text.comp';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import Icon from '@components/icons/icon.comp';
 
 const Header: React.FC<HeaderProps> = (props: HeaderProps): React.FunctionComponentElement<HeaderProps> => {

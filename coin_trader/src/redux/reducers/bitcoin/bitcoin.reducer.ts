@@ -1,4 +1,4 @@
-import { set, cloneDeep } from 'lodash';
+import {set, cloneDeep} from 'lodash';
 import {Action, actionType} from '@redux/actions/actions.types';
 import {BitcoinReducer} from '@redux/reducers/bitcoin/bitcoin.types';
 

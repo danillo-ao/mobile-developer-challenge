@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components/native';
-import { getThemeColor } from '@theme/theme.utils';
+import {getThemeColor} from '@theme/theme.utils';
 import {ScreenProps} from '@screens/screen.types';
 
 export const Screen = styled.View<ScreenProps>`

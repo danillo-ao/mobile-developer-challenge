@@ -1,8 +1,7 @@
 import {Dispatch} from 'redux';
-import { get_bitcoin_data } from '@sdk/api/bitcoins/bitcoins.api';
+import {get_bitcoin_data} from '@sdk/api/bitcoins/bitcoins.api';
 import {Action, actionType} from '@redux/actions/actions.types';
 
-import Reactotron from 'reactotron-react-native';
 import {WalletReducer} from '@redux/reducers/wallet/wallet.types';
 
 /**

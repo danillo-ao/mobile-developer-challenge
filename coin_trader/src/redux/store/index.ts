@@ -4,12 +4,12 @@ declare global {
 }
 
 
-import { composeWithDevTools } from 'remote-redux-devtools';
-import { createStore, applyMiddleware } from 'redux';
+import {composeWithDevTools} from 'remote-redux-devtools';
+import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '@redux/reducers';
 
-import { persistStore, persistReducer } from 'redux-persist';
+import {persistStore, persistReducer} from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import AsyncStorage from '@react-native-community/async-storage';
 
