@@ -37,7 +37,7 @@ yarn android
 npx react-native run-android
 ```
 
-##### - debugando o redux
+#### debugando o redux
 para inspecionar a estrutura da store, e chamada de actions do redux, você irá precisar da extensão [Redux Devtools](https://addons.mozilla.org/pt-BR/firefox/addon/reduxdevtools/) instalada no seu navegador.
 
 Com a extensão instalada, no seu terminal, execute o comando
