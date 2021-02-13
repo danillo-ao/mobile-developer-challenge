@@ -54,22 +54,22 @@ Um novo popup irá abrir.
 Com o popup aberto, no seu emulador ou aparelho fisico, habilite o modo ``debug`` do react.
 Quando o aplicativo carregar novamente, você poderá ver no popup, a estrutura atual da store do react, e em tempo real, as actions que são executadas.
 
-**_Obs:_** caso não surja nenhum efeito no popup, clique em `settings` na canto inferior direito, e adicione a porta **_8000_** no input. Salve e dê um refresh no aplicativo. 
+> **_Obs:_** caso não surja nenhum efeito no popup, clique em `settings` na canto inferior direito, e adicione a porta **_8000_** no input. Salve e dê um refresh no aplicativo. 
 
 ---
 
 ### Uso em ambiente de produção.
-• Buildar a apk
+**Buildar a apk**
 ```bash
 yarn android:build
 ```
 
-• Caso o build apresente alguma falha, execute o comando abaixo, e tente novamente.
+Caso o build apresente alguma falha, execute o comando abaixo, e tente novamente.
 ```bash
 yarn android:clean
 ```
 
-• Instalar a versão gerada <br/>
+**Instalar a versão gerada** <br/>
 Para instalar a apk gerada, você precisa ter o [adb](https://developer.android.com/studio/command-line/adb?hl=pt-br) configurado no seu ambiente. <br/>
 Com o adb devidamente configurado, execute o comando
 ```bash
@@ -78,3 +78,32 @@ yarn android:install
 Lembrando que este comando só funcionará caso você possua somente um dispositivo android conectado, seja emulador ou aparelho físico. 
 
 ---
+
+### Ferramentas de debug utilizadas
+
+* **Reactotron** - v3.0.0-beta.9 - [link](https://github.com/infinitered/reactotron/releases/tag/v3.0.0-beta.9)
+* **Redux Devtools** - v2.17.1 - [link](https://addons.mozilla.org/pt-BR/firefox/addon/reduxdevtools/)
+* **Remotedev server** - v0.3.1 - [link](https://www.npmjs.com/package/remotedev-server)
+
+---
+
+### Thirdparty - Bibliotecas utilizadas / componentes
+
+* react-native-splash-screen
+* styled-components
+* react-native-currency-input
+
+---
+
+### Thirdparty - Bibliotecas utilizadas / utils ou core
+
+* @react-native-community/async-storage
+* @react-native-community/clipboard
+* @react-navigation/native
+* apisauce
+* intl
+* lodash
+* react-redux
+* redux
+* redux-persist
+* redux-thunk
