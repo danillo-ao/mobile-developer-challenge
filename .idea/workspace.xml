@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/java/com/coin_trader/SplashActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/drawable/background_splash.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/layout/launch_screen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/java/com/coin_trader/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/java/com/coin_trader/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/splash_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-hdpi/splash_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-ldpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-ldpi/splash_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/splash_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-mdpi/splash_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/splash_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xhdpi/splash_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/splash_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxhdpi/splash_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/splash_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/mipmap-xxxhdpi/splash_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +70,10 @@
       <screen x="0" y="27" width="1366" height="697" />
     </state>
     <state x="466" y="132" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.697@0.27.1366.697" timestamp="1613242760696" />
+    <state x="464" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613250935902">
+      <screen x="0" y="27" width="1366" height="697" />
+    </state>
+    <state x="464" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.697@0.27.1366.697" timestamp="1613250935902" />
     <state x="372" y="113" width="994" height="580" key="find.popup" timestamp="1613246783730">
       <screen x="0" y="27" width="1366" height="697" />
     </state>

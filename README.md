@@ -1,3 +1,7 @@
+`` readme.md do desafio dentro da pasta "coin_trader" ``
+
+-----
+
 # Gama Academy
 
 # Mobile Developer Challenge
