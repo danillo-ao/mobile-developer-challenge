@@ -17,7 +17,7 @@ export const SnackbarInner = styled(View)`
   width: 100%;
   flex: 1;
   flex-direction: row;
-  padding: ${({ theme }) => theme.units.padding}px;
+  padding: ${({ theme }) => theme?.units?.padding}px;
   align-items: center;
   justify-content: center;
 `;

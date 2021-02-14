@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21443e6f-09a6-4788-a77a-8529ce7f758c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/coin_trader/__tests__/api/bitcoins-api.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coin_trader/__tests__/theme/theme-values.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/order/order.screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/order/order.screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin_trader/src/screens/order/order.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/screens/order/order.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/__tests__/button.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/__tests__/test.utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/__tests__/test.utils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/src/components/snackbar/snackbar.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/src/components/snackbar/snackbar.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin_trader/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/coin_trader/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612895984921</updated>
       <workItem from="1612895985938" duration="97025000" />
-      <workItem from="1613323855716" duration="571000" />
+      <workItem from="1613323855716" duration="4942000" />
     </task>
     <servers />
   </component>
