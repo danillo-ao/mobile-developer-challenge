@@ -26,7 +26,7 @@ import {
   OrderShortcutsValues,
   OrderType,
   OrderTypes,
-  OrderLineRow, CopyToClipboardAction, BitcoinLastPriceTitle,
+  OrderLineRow, CopyToClipboardAction, BitcoinLastPriceTitle, OrderShortcutLabel,
 } from '@screens/order/order.styles';
 import {SnackbarContext} from '@components/snackbar/snackbar.comp';
 import {SnackbarContextValues} from '@components/snackbar/snackbar.types';
@@ -225,7 +225,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (): React.FunctionComponentEleme
     <OrderLine>
       <OrderLineRow>
         <Text>Valor</Text>
-        <Text style={{ opacity: 0.4 }}>mínimo: R$ 1,00</Text>
+        <Text style={{ opacity: 0.4 }}>mín: R$ 1,00</Text>
       </OrderLineRow>
       <OrderCurrencyInput value={buyValue} unit="R$ " onChangeValue={setBuyValue} />
     </OrderLine>
@@ -238,7 +238,7 @@ const OrderScreen: React.FC<OrderScreenProps> = (): React.FunctionComponentEleme
     <OrderLine>
       <OrderLineRow>
         <Text>Quantidade</Text>
-        <Text style={{ opacity: 0.4 }}>unid. {parseBtc(wallet.btc_unit, 8)}</Text>
+        <Text style={{ opacity: 0.4 }}>mín: 0.0000001</Text>
       </OrderLineRow>
       <OrderCurrencyInput value={sellQuantity} precision={8} onChangeValue={setSellQuantity} />
     </OrderLine>
@@ -318,6 +318,14 @@ const OrderScreen: React.FC<OrderScreenProps> = (): React.FunctionComponentEleme
 
           <Animated.View style={{ opacity: animation }}>
             {isSellOrder ? renderSellValue() : renderBuyValue()}
+            <OrderShortcutLabel>
+              <Text size="sm">
+                {isSellOrder ? ('Utilizar unidades disponíveis') : ('Utilizar saldo disponível')}
+              </Text>
+              <Text size="sm">
+                {isSellOrder ? parseBtc(wallet.btc_unit, 8) : `R$ ${currencyFormat(wallet.brl)}`}
+              </Text>
+            </OrderShortcutLabel>
             <OrderShortcutsValues>
               <OrderShortcut>
                 <OrderShortcutAction onPress={() => { shortcutValue(25); }}>

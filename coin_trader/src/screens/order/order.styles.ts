@@ -68,6 +68,13 @@ export const OrderLineRow = styled.View`
   justify-content: space-between;
 `;
 
+export const OrderShortcutLabel = styled.View`
+  width: 100%;
+  margin-top: ${({ theme }) => (theme.units.padding / 2)}px;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 export const OrderShortcutsValues = styled.View`
   width: ${({ theme }) => (Dimensions.get('window').width - theme.units.padding)}px;
   margin-left: -${({ theme }) => (theme.units.padding / 2)}px;
